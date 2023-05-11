@@ -20,7 +20,7 @@ const Reviews = ({ reviews }) => {
       <h1 style={{ textAlign: "center", marginBottom: "30px" }}>
         Отзывы клиентов
       </h1>
-      {!!reviews &&
+      {!!reviews.length &&
         reviews.slice(0, `${limit}`).map((res) => {
           return (
             <div className="reviewItem" key={res.id}>
