@@ -2,13 +2,11 @@ import Link from "next/link";
 import React from "react";
 import styles from "../../styles/burgers.module.css";
 import Image from "next/image";
+import { burgers } from "./[id]";
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/items");
-  const data = await res.json();
-
   return {
-    props: { burgers: data },
+    props: { burgers },
   };
 };
 const Burgers = ({ burgers }) => {
